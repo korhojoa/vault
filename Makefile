@@ -214,7 +214,7 @@ ember-dist-dev: install-ui-dependencies
 static-dist: ember-dist
 static-dist-dev: ember-dist-dev
 
-proto: 
+proto: bootstrap 
 	@sh -c "'$(CURDIR)/scripts/protocversioncheck.sh' '$(PROTOC_VERSION_MIN)'"
 	protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative vault/*.proto
 	protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative vault/activity/activity_log.proto
